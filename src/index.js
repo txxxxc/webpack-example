@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import { hoge } from './utilities';
 
 function component() {
   const element = document.createElement('div');
@@ -8,3 +9,4 @@ function component() {
 }
 
 document.body.appendChild(component());
+console.log(hoge(2));
