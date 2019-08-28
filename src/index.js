@@ -1,5 +1,7 @@
 import _ from 'lodash';
-import { hoge } from './utilities';
+import './style.css';
+
+console.log(style.toString());
 
 function component() {
   const element = document.createElement('div');
@@ -9,4 +11,4 @@ function component() {
 }
 
 document.body.appendChild(component());
-console.log(hoge(2));
+document.body.classList.add('background');
