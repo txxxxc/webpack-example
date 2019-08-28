@@ -10,6 +10,15 @@ module.exports = {
     filename: 'main.js',
     path: outputPath
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        //loaderは逆にロードされる
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   devServer: {
     contentBase: outputPath
   }
