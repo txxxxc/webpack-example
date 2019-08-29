@@ -1,8 +1,6 @@
 import _ from 'lodash';
 import './style.css';
-
-console.log(style.toString());
-
+import logo from './hoge.png';
 function component() {
   const element = document.createElement('div');
   const array = ['Hello', 'webpack', '!!!'];
@@ -10,5 +8,12 @@ function component() {
   return element;
 }
 
+console.log(logo);
+
 document.body.appendChild(component());
 document.body.classList.add('background');
+
+const image = new Image();
+
+image.src = logo;
+document.body.appendChild(image);
