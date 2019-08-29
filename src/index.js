@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import './style.css';
 import logo from './hoge.png';
+import './style.scss';
+
 function component() {
   const element = document.createElement('div');
   const array = ['Hello', 'webpack', '!!!'];
