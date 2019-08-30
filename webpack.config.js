@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, 'dist');
 console.log({ outputPath });
@@ -29,10 +30,25 @@ module.exports = {
         test: /\.scss$/,
         //loaderは逆にロードされる
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-loader'
       }
     ]
   },
   devServer: {
     contentBase: outputPath
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+      filename: './index.html'
+    })
+  ]
 };
